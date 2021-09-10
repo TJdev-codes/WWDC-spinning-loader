@@ -1,0 +1,78 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+body {
+    height: 100vh;
+}
+
+body,
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    padding: 2em;
+}
+
+.loader {
+    height: 100px;
+    width: 100px;
+    border: double 16px transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white), linear-gradient(to right, hotpink, black);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    
+}
+
+.loader-active {
+    animation: spinningLoader 1s infinite;
+}
+
+button { 
+    border: 3px solid black;
+    padding: 1em 2em;
+    margin: 1em;
+    border-radius: 5px;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+}
+
+@keyframes spinningLoader {
+    0% {
+        background-image: linear-gradient(white, white), linear-gradient(to bottom right, hotpink, black);
+    }
+    14% {
+        background-image: linear-gradient(white, white), linear-gradient(to bottom, hotpink, black);
+    }
+    28% {
+        background-image: linear-gradient(white, white), linear-gradient(to bottom left, hotpink, black);
+    }
+    42% {
+        background-image: linear-gradient(white, white), linear-gradient(to left, hotpink, black);
+    }
+    56% {
+        background-image: linear-gradient(white, white), linear-gradient(to top left, hotpink, black);
+    }
+    70% {
+        background-image: linear-gradient(white, white), linear-gradient(to top, hotpink, black);
+    }
+    84% {
+        background-image: linear-gradient(white, white), linear-gradient(to top right, hotpink, black);
+    }
+    100% {
+        background-image: linear-gradient(white, white), linear-gradient(to right, hotpink, black);
+    }
+}
+
